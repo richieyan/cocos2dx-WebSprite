@@ -25,6 +25,7 @@ bool WebSprite::initWithUrl(const std::string &url){
     
     if(fileUtils->isFileExist(_path)){
         _content = Sprite::create(_path);
+        _content->setAnchorPoint(Vec2(0,0));
         addChild(_content);
         _eventDispatcher->dispatchCustomEvent(COMPLETED,this);
     }else{
@@ -48,6 +49,7 @@ void WebSprite::load(const std::string &url){
             textureCache->addImage(image.get(),_url);
             image->saveToFile(_path);
             _content = Sprite::createWithTexture(textureCache->getTextureForKey(_url));
+            _content->setAnchorPoint(Vec2(0,0));
             addChild(_content);
             this->setContentSize(_content->getContentSize());
             _eventDispatcher->dispatchCustomEvent(COMPLETED,this);
