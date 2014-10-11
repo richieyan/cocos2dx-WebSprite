@@ -1,6 +1,5 @@
 //
 //  WebSprite.cpp
-//  ClashOfClouds
 //
 //  Created by Richie Yan on 10/11/14.
 //
