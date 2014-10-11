@@ -27,7 +27,6 @@ public:
     
 private:
     void load(const std::string & url);
-    std::string getOutputFilePath();
 };
 
 #endif /* defined(__ClashOfClouds__WebSprite__) */
